@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PR Nepal – Nepal's #1 Press Release Distribution Platform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    * { font-family: 'Inter', sans-serif; }
+
+    /* Ticker */
+    .ticker-wrap { overflow: hidden; white-space: nowrap; }
+    .ticker-move {
+      display: inline-block;
+      animation: ticker 40s linear infinite;
+    }
+    .ticker-move:hover { animation-play-state: paused; }
+    @keyframes ticker {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Line clamp */
+    .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+    /* Tab active */
+    .tab-active { background: #fff; color: #111; box-shadow: 0 1px 3px rgba(0,0,0,.1); font-weight: 700; }
+
+    /* Rank badge colors */
+    .rank-1 { background: #dc2626; }
+    .rank-2 { background: #ea580c; }
+    .rank-3 { background: #ca8a04; }
+    .rank-n { background: #6b7280; }
+
+    /* Smooth hover */
+    article, .card { transition: box-shadow .15s, transform .15s; }
+    article:hover, .card:hover { box-shadow: 0 4px 20px rgba(0,0,0,.08); transform: translateY(-1px); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+<!-- ═══════════════════ TOP UTILITY BAR ═══════════════════ -->
+<div class="bg-blue-700 text-white text-xs py-1.5">
+  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+    <span>🇳🇵 Nepal's First Dedicated Press Release Distribution Platform &nbsp;·&nbsp; Now Accepting Early Members</span>
+    <div class="flex items-center space-x-4">
+      <a href="#" class="hover:underline">For Journalists</a>
+      <a href="#" class="hover:underline">Advertise</a>
+      <a href="#" class="hover:underline font-semibold">Login / Register</a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ MAIN NAVBAR ═══════════════════ -->
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
+    <!-- Logo -->
+    <a href="#" class="flex items-center space-x-2 shrink-0">
+      <span class="text-2xl font-extrabold text-blue-600 tracking-tight">PR <span class="text-gray-900">Nepal</span></span>
+      <span class="text-[10px] bg-gray-100 text-gray-500 px-2 py-0.5 rounded font-medium hidden sm:block">by Sanjal Communications</span>
+    </a>
+
+    <!-- Search -->
+    <div class="flex-1 max-w-xl hidden md:block">
+      <div class="relative">
+        <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg>
+        <input type="text" placeholder="Search press releases, companies, topics…" class="w-full bg-gray-100 pl-9 pr-4 py-2 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition" />
+      </div>
+    </div>
+
+    <!-- Nav + CTA -->
+    <nav class="flex items-center space-x-5 shrink-0">
+      <a href="#" class="text-sm text-gray-600 hover:text-blue-600 hidden lg:block">Browse</a>
+      <a href="#" class="text-sm text-gray-600 hover:text-blue-600 hidden lg:block">Companies</a>
+      <a href="#" class="text-sm text-gray-600 hover:text-blue-600 hidden lg:block">Categories</a>
+      <button class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition whitespace-nowrap">
+        + Submit PR
+      </button>
+    </nav>
+  </div>
+
+  <!-- Category nav strip -->
+  <div class="border-t border-gray-100 bg-white">
+    <div class="max-w-7xl mx-auto px-4 flex items-center space-x-1 overflow-x-auto no-scrollbar py-1">
+      <a href="#" class="text-xs font-semibold text-blue-600 bg-blue-50 px-3 py-1.5 rounded-full whitespace-nowrap">All</a>
+      <a href="#" class="text-xs text-gray-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-1.5 rounded-full whitespace-nowrap transition">Finance &amp; Banking</a>
+      <a href="#" class="text-xs text-gray-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-1.5 rounded-full whitespace-nowrap transition">Technology</a>
+      <a href="#" class="text-xs text-gray-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-1.5 rounded-full whitespace-nowrap transition">Energy</a>
+      <a href="#" class="text-xs text-gray-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-1.5 rounded-full whitespace-nowrap transition">Telecom</a>
+      <a href="#" class="text-xs text-gray-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-1.5 rounded-full whitespace-nowrap transition">Real Estate</a>
+      <a href="#" class="text-xs text-gray-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-1.5 rounded-full whitespace-nowrap transition">Healthcare</a>
+      <a href="#" class="text-xs text-gray-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-1.5 rounded-full whitespace-nowrap transition">Automotive</a>
+      <a href="#" class="text-xs text-gray-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-1.5 rounded-full whitespace-nowrap transition">FMCG</a>
+      <a href="#" class="text-xs text-gray-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-1.5 rounded-full whitespace-nowrap transition">Government</a>
+      <a href="#" class="text-xs text-gray-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-1.5 rounded-full whitespace-nowrap transition">Education</a>
+      <a href="#" class="text-xs text-gray-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-1.5 rounded-full whitespace-nowrap transition">Tourism</a>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════ BREAKING NEWS TICKER ═══════════════════ -->
+<div class="bg-red-600 text-white text-xs py-2">
+  <div class="max-w-7xl mx-auto px-4 flex items-center gap-3">
+    <span class="shrink-0 font-bold bg-white text-red-600 px-2 py-0.5 rounded text-[10px] uppercase tracking-wide">Breaking</span>
+    <div class="ticker-wrap flex-1">
+      <span class="ticker-move">
+        PR Nepal is launching — Nepal's first dedicated press release platform &nbsp;·&nbsp; Free for journalists &nbsp;·&nbsp; Submit your company's press release today &nbsp;·&nbsp; Reach every major Nepali newsroom in one click &nbsp;·&nbsp; Now accepting early member companies &nbsp;·&nbsp; Built by Sanjal Communications, Kathmandu &nbsp;·&nbsp;
+        PR Nepal is launching — Nepal's first dedicated press release platform &nbsp;·&nbsp; Free for journalists &nbsp;·&nbsp; Submit your company's press release today &nbsp;·&nbsp; Reach every major Nepali newsroom in one click &nbsp;·&nbsp; Now accepting early member companies &nbsp;·&nbsp; Built by Sanjal Communications, Kathmandu &nbsp;·&nbsp;
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ STATS BAR ═══════════════════ -->
+<div class="bg-white border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 py-3 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+    <div>
+      <p class="text-xl font-extrabold text-blue-600">Launching</p>
+      <p class="text-xs text-gray-500 mt-0.5">Now Accepting Companies</p>
+    </div>
+    <div>
+      <p class="text-xl font-extrabold text-blue-600">Free</p>
+      <p class="text-xs text-gray-500 mt-0.5">For Journalists — Always</p>
+    </div>
+    <div>
+      <p class="text-xl font-extrabold text-blue-600">Nepal</p>
+      <p class="text-xs text-gray-500 mt-0.5">First Platform of Its Kind</p>
+    </div>
+    <div>
+      <p class="text-xl font-extrabold text-blue-600">2026</p>
+      <p class="text-xs text-gray-500 mt-0.5">Est. by Sanjal Communications</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ MAIN CONTENT ═══════════════════ -->
+<main class="max-w-7xl mx-auto px-4 py-8">
+  <div class="flex gap-8">
+
+    <!-- ── LEFT: PRIMARY CONTENT ── -->
+    <div class="flex-1 min-w-0">
+
+      <!-- HERO FEATURED STORY -->
+      <section class="mb-8">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-base font-bold text-gray-900 border-l-4 border-blue-600 pl-3">Featured Story</h2>
+        </div>
+        <article class="bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm flex flex-col md:flex-row group">
+          <div class="md:w-2/5 aspect-video md:aspect-auto bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 flex items-center justify-center p-6 relative shrink-0">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                <span class="text-white font-extrabold text-2xl">PR</span>
+              </div>
+              <p class="text-white font-bold text-sm">Your Company Here</p>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-[10px] bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full font-bold">Be the first featured company</span>
+              </div>
+              <h3 class="text-xl font-extrabold text-gray-900 leading-tight mb-3">
+                PR Nepal is now live — submit your company's first press release and get featured here.
+              </h3>
+              <p class="text-sm text-gray-500">PR Nepal is Nepal's first dedicated press release distribution platform. Submit your press release and reach journalists at Kantipur, Onlinekhabar, Ratopati, Setopati, and more — all in one place.</p>
+            </div>
+            <div class="mt-4">
+              <button class="bg-blue-600 text-white text-sm font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition">Submit Your First PR →</button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- RANKING SECTION -->
+      <section>
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-base font-bold text-gray-900 border-l-4 border-red-500 pl-3">Press Release Rankings</h2>
+          <div class="flex space-x-1 bg-gray-100 p-1 rounded-lg text-xs">
+            <button onclick="setTab(this,'24h')" class="tab-active px-3 py-1.5 rounded-md transition" data-tab="24h">24 Hours</button>
+            <button onclick="setTab(this,'week')" class="text-gray-500 px-3 py-1.5 rounded-md hover:text-gray-800 transition" data-tab="week">Weekly</button>
+            <button onclick="setTab(this,'month')" class="text-gray-500 px-3 py-1.5 rounded-md hover:text-gray-800 transition" data-tab="month">Monthly</button>
+          </div>
+        </div>
+
+        <!-- Coming soon message -->
+        <div class="bg-blue-50 border border-blue-100 rounded-xl p-8 text-center mb-6">
+          <p class="text-4xl mb-3">📊</p>
+          <h3 class="text-lg font-bold text-gray-800 mb-2">Rankings Coming Soon</h3>
+          <p class="text-sm text-gray-500 mb-4">Once companies start submitting press releases, the most-viewed ones will appear here ranked in real time.</p>
+          <button class="bg-blue-600 text-white text-sm font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition">Be the First to Submit →</button>
+        </div>
+
+        <!-- Top 3 grid hidden until content exists -->
+        <div class="hidden grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+
+          <!-- Rank 1 -->
+          <article class="bg-white rounded-xl border border-gray-100 overflow-hidden group shadow-sm">
+            <div class="relative aspect-[16/9]">
+              <div class="absolute top-3 left-3 rank-1 text-white font-extrabold text-base w-9 h-9 flex items-center justify-center rounded-full shadow z-10">1</div>
+              <div class="absolute top-3 right-3 bg-black/40 text-white text-[10px] px-2 py-0.5 rounded-full z-10 flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                24.3K
+              </div>
+              <div class="w-full h-full bg-gradient-to-br from-blue-500 to-indigo-700 flex flex-col items-center justify-center text-white p-4">
+                <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center font-bold text-lg mb-2">NC</div>
+                <p class="text-xs font-semibold">Ncell Axiata</p>
+              </div>
+            </div>
+            <div class="p-4">
+              <p class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-1">Ncell Axiata</p>
+              <h3 class="font-bold text-sm text-gray-900 leading-snug line-clamp-2 group-hover:text-blue-600 transition">
+                <a href="#">Ncell initiates 5G trials in Kathmandu Valley, targeting commercial launch in Q1 2027.</a>
+              </h3>
+              <div class="mt-3 flex items-center justify-between text-[11px] text-gray-400">
+                <span>12 min ago</span>
+                <span class="bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Telecom</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Rank 2 -->
+          <article class="bg-white rounded-xl border border-gray-100 overflow-hidden group shadow-sm">
+            <div class="relative aspect-[16/9]">
+              <div class="absolute top-3 left-3 rank-2 text-white font-extrabold text-base w-9 h-9 flex items-center justify-center rounded-full shadow z-10">2</div>
+              <div class="absolute top-3 right-3 bg-black/40 text-white text-[10px] px-2 py-0.5 rounded-full z-10 flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                18.7K
+              </div>
+              <div class="w-full h-full bg-gradient-to-br from-emerald-500 to-teal-700 flex flex-col items-center justify-center text-white p-4">
+                <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center font-bold text-lg mb-2">NB</div>
+                <p class="text-xs font-semibold">NIMB Bank</p>
+              </div>
+            </div>
+            <div class="p-4">
+              <p class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-1">NIMB Bank Ltd.</p>
+              <h3 class="font-bold text-sm text-gray-900 leading-snug line-clamp-2 group-hover:text-blue-600 transition">
+                <a href="#">NIMB Bank launches Nepal's first Green Fixed Deposit offering 9.5% interest for hydropower.</a>
+              </h3>
+              <div class="mt-3 flex items-center justify-between text-[11px] text-gray-400">
+                <span>1 hr ago</span>
+                <span class="bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Banking</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Rank 3 -->
+          <article class="bg-white rounded-xl border border-gray-100 overflow-hidden group shadow-sm">
+            <div class="relative aspect-[16/9]">
+              <div class="absolute top-3 left-3 rank-3 text-white font-extrabold text-base w-9 h-9 flex items-center justify-center rounded-full shadow z-10">3</div>
+              <div class="absolute top-3 right-3 bg-black/40 text-white text-[10px] px-2 py-0.5 rounded-full z-10 flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                11.2K
+              </div>
+              <div class="w-full h-full bg-gradient-to-br from-purple-500 to-pink-700 flex flex-col items-center justify-center text-white p-4">
+                <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center font-bold text-lg mb-2">YM</div>
+                <p class="text-xs font-semibold">Yatri Motorcycles</p>
+              </div>
+            </div>
+            <div class="p-4">
+              <p class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-1">Yatri Motorcycles</p>
+              <h3 class="font-bold text-sm text-gray-900 leading-snug line-clamp-2 group-hover:text-blue-600 transition">
+                <a href="#">Yatri unveils Project One Gen-2 with improved range, local chassis, and 45-min fast charge.</a>
+              </h3>
+              <div class="mt-3 flex items-center justify-between text-[11px] text-gray-400">
+                <span>3 hr ago</span>
+                <span class="bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Automotive</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Ranks 4–10: compact list -->
+        <div class="hidden bg-white rounded-xl border border-gray-100 shadow-sm divide-y divide-gray-50">
+          <h3 class="text-xs font-bold text-gray-500 uppercase tracking-wider px-5 pt-4 pb-2">More Rankings</h3>
+
+          <!-- Row template -->
+          <div class="flex items-center gap-4 px-5 py-4 hover:bg-gray-50 transition group cursor-pointer">
+            <span class="rank-n text-white text-xs font-bold w-7 h-7 flex items-center justify-center rounded-full shrink-0">4</span>
+            <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center text-white text-xs font-bold shrink-0">HB</div>
+            <div class="flex-1 min-w-0">
+              <p class="text-[10px] text-gray-400 mb-0.5">Himalayan Bank Ltd.</p>
+              <p class="text-sm font-semibold text-gray-900 line-clamp-1 group-hover:text-blue-600 transition">Himalayan Bank reports 18% net profit growth in Q3 FY2025-26, driven by digital lending surge.</p>
+            </div>
+            <div class="text-right shrink-0">
+              <p class="text-sm font-bold text-gray-700">9,840</p>
+              <p class="text-[10px] text-gray-400">views</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 px-5 py-4 hover:bg-gray-50 transition group cursor-pointer">
+            <span class="rank-n text-white text-xs font-bold w-7 h-7 flex items-center justify-center rounded-full shrink-0">5</span>
+            <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-sky-400 to-blue-600 flex items-center justify-center text-white text-xs font-bold shrink-0">CG</div>
+            <div class="flex-1 min-w-0">
+              <p class="text-[10px] text-gray-400 mb-0.5">CG Corp Global</p>
+              <p class="text-sm font-semibold text-gray-900 line-clamp-1 group-hover:text-blue-600 transition">CG Corp finalizes Rs 3.2B acquisition of Wai Wai rival brand, marking largest FMCG deal of 2026.</p>
+            </div>
+            <div class="text-right shrink-0">
+              <p class="text-sm font-bold text-gray-700">8,120</p>
+              <p class="text-[10px] text-gray-400">views</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 px-5 py-4 hover:bg-gray-50 transition group cursor-pointer">
+            <span class="rank-n text-white text-xs font-bold w-7 h-7 flex items-center justify-center rounded-full shrink-0">6</span>
+            <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center text-white text-xs font-bold shrink-0">NA</div>
+            <div class="flex-1 min-w-0">
+              <p class="text-[10px] text-gray-400 mb-0.5">Nepal Airlines Corp.</p>
+              <p class="text-sm font-semibold text-gray-900 line-clamp-1 group-hover:text-blue-600 transition">Nepal Airlines to launch Kathmandu–Dubai direct flight starting September 2026; tickets open next week.</p>
+            </div>
+            <div class="text-right shrink-0">
+              <p class="text-sm font-bold text-gray-700">7,503</p>
+              <p class="text-[10px] text-gray-400">views</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 px-5 py-4 hover:bg-gray-50 transition group cursor-pointer">
+            <span class="rank-n text-white text-xs font-bold w-7 h-7 flex items-center justify-center rounded-full shrink-0">7</span>
+            <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-400 to-violet-600 flex items-center justify-center text-white text-xs font-bold shrink-0">NRB</div>
+            <div class="flex-1 min-w-0">
+              <p class="text-[10px] text-gray-400 mb-0.5">Nepal Rastra Bank</p>
+              <p class="text-sm font-semibold text-gray-900 line-clamp-1 group-hover:text-blue-600 transition">NRB raises overnight repo rate by 25bps to 5.25% amid growing inflationary pressure.</p>
+            </div>
+            <div class="text-right shrink-0">
+              <p class="text-sm font-bold text-gray-700">6,210</p>
+              <p class="text-[10px] text-gray-400">views</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 px-5 py-4 hover:bg-gray-50 transition group cursor-pointer">
+            <span class="rank-n text-white text-xs font-bold w-7 h-7 flex items-center justify-center rounded-full shrink-0">8</span>
+            <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-white text-xs font-bold shrink-0">BB</div>
+            <div class="flex-1 min-w-0">
+              <p class="text-[10px] text-gray-400 mb-0.5">Bhatbhateni Superstore</p>
+              <p class="text-sm font-semibold text-gray-900 line-clamp-1 group-hover:text-blue-600 transition">Bhatbhateni opens its 12th outlet in Pokhara's Lakeside area, creating 300 new jobs.</p>
+            </div>
+            <div class="text-right shrink-0">
+              <p class="text-sm font-bold text-gray-700">5,870</p>
+              <p class="text-[10px] text-gray-400">views</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 px-5 py-4 hover:bg-gray-50 transition group cursor-pointer">
+            <span class="rank-n text-white text-xs font-bold w-7 h-7 flex items-center justify-center rounded-full shrink-0">9</span>
+            <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-teal-400 to-cyan-600 flex items-center justify-center text-white text-xs font-bold shrink-0">KU</div>
+            <div class="flex-1 min-w-0">
+              <p class="text-[10px] text-gray-400 mb-0.5">Kathmandu University</p>
+              <p class="text-sm font-semibold text-gray-900 line-clamp-1 group-hover:text-blue-600 transition">KU signs MoU with IIT Bombay for joint AI research lab and dual-degree program starting 2027.</p>
+            </div>
+            <div class="text-right shrink-0">
+              <p class="text-sm font-bold text-gray-700">4,330</p>
+              <p class="text-[10px] text-gray-400">views</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 px-5 py-4 hover:bg-gray-50 transition group cursor-pointer">
+            <span class="rank-n text-white text-xs font-bold w-7 h-7 flex items-center justify-center rounded-full shrink-0">10</span>
+            <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-rose-400 to-red-600 flex items-center justify-center text-white text-xs font-bold shrink-0">SR</div>
+            <div class="flex-1 min-w-0">
+              <p class="text-[10px] text-gray-400 mb-0.5">Sunrise Energy Pvt. Ltd.</p>
+              <p class="text-sm font-semibold text-gray-900 line-clamp-1 group-hover:text-blue-600 transition">Sunrise Energy receives NEA approval for 120MW solar farm in Mustang; construction begins Q4.</p>
+            </div>
+            <div class="text-right shrink-0">
+              <p class="text-sm font-bold text-gray-700">3,910</p>
+              <p class="text-[10px] text-gray-400">views</p>
+            </div>
+          </div>
+
+          <div class="px-5 py-3">
+            <a href="#" class="text-sm text-blue-600 font-semibold hover:underline">View all rankings →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- LATEST PRESS RELEASES -->
+      <section class="mt-10">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-base font-bold text-gray-900 border-l-4 border-green-500 pl-3">Latest Press Releases</h2>
+          <a href="#" class="text-xs text-blue-600 font-semibold hover:underline">View all →</a>
+        </div>
+        <div class="bg-gray-50 border border-gray-100 rounded-xl p-8 text-center">
+          <p class="text-4xl mb-3">📰</p>
+          <h3 class="text-lg font-bold text-gray-800 mb-2">No Press Releases Yet</h3>
+          <p class="text-sm text-gray-500 mb-4">PR Nepal just launched. Be among the first companies to publish here and get maximum visibility.</p>
+          <button class="bg-blue-600 text-white text-sm font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition">Submit a Press Release →</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- ── RIGHT: SIDEBAR ── -->
+    <aside class="hidden lg:block w-72 shrink-0 space-y-6">
+
+      <!-- NEW ARRIVALS -->
+      <div class="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
+        <div class="bg-gray-900 text-white text-xs font-bold uppercase tracking-wider px-4 py-3">
+          🆕 New Arrivals
+        </div>
+        <div class="px-4 py-8 text-center text-gray-400">
+          <p class="text-3xl mb-2">📭</p>
+          <p class="text-xs">No releases yet. Check back soon.</p>
+        </div>
+      </div>
+
+      <!-- POPULAR BY CATEGORY -->
+      <div class="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
+        <div class="bg-blue-600 text-white text-xs font-bold uppercase tracking-wider px-4 py-3">
+          Popular by Category
+        </div>
+        <div class="p-4 space-y-3">
+          <div class="flex items-center justify-between">
+            <a href="#" class="text-xs font-semibold text-gray-700 hover:text-blue-600 transition">Finance &amp; Banking</a>
+            <span class="text-[10px] bg-gray-100 text-gray-400 px-2 py-0.5 rounded-full font-semibold">0 PRs</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <a href="#" class="text-xs font-semibold text-gray-700 hover:text-blue-600 transition">Technology</a>
+            <span class="text-[10px] bg-gray-100 text-gray-400 px-2 py-0.5 rounded-full font-semibold">0 PRs</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <a href="#" class="text-xs font-semibold text-gray-700 hover:text-blue-600 transition">Energy</a>
+            <span class="text-[10px] bg-gray-100 text-gray-400 px-2 py-0.5 rounded-full font-semibold">0 PRs</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <a href="#" class="text-xs font-semibold text-gray-700 hover:text-blue-600 transition">Real Estate</a>
+            <span class="text-[10px] bg-gray-100 text-gray-400 px-2 py-0.5 rounded-full font-semibold">0 PRs</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <a href="#" class="text-xs font-semibold text-gray-700 hover:text-blue-600 transition">Healthcare</a>
+            <span class="text-[10px] bg-gray-100 text-gray-400 px-2 py-0.5 rounded-full font-semibold">0 PRs</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <a href="#" class="text-xs font-semibold text-gray-700 hover:text-blue-600 transition">Tourism</a>
+            <span class="text-[10px] bg-gray-100 text-gray-400 px-2 py-0.5 rounded-full font-semibold">0 PRs</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <a href="#" class="text-xs font-semibold text-gray-700 hover:text-blue-600 transition">Government</a>
+            <span class="text-[10px] bg-gray-100 text-gray-400 px-2 py-0.5 rounded-full font-semibold">0 PRs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUBMIT CTA CARD -->
+      <div class="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl p-5 text-white shadow-sm">
+        <h3 class="font-extrabold text-base mb-1">Get Your Story Out</h3>
+        <p class="text-xs text-blue-100 mb-4 leading-relaxed">Reach journalists at every major Nepali newsroom — Kantipur, Onlinekhabar, Ratopati, Setopati and more — in one click.</p>
+        <ul class="space-y-1.5 mb-5">
+          <li class="text-xs text-blue-100 flex items-center gap-2">
+            <svg class="w-3.5 h-3.5 text-green-300 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            Instant distribution to media partners
+          </li>
+          <li class="text-xs text-blue-100 flex items-center gap-2">
+            <svg class="w-3.5 h-3.5 text-green-300 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            Real-time view &amp; engagement analytics
+          </li>
+          <li class="text-xs text-blue-100 flex items-center gap-2">
+            <svg class="w-3.5 h-3.5 text-green-300 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            SEO-optimized press release pages
+          </li>
+        </ul>
+        <button class="w-full bg-white text-blue-700 font-bold text-sm py-2.5 rounded-lg hover:bg-blue-50 transition">
+          Submit a Press Release
+        </button>
+        <p class="text-[10px] text-blue-200 text-center mt-2">Plans from NPR 999/month</p>
+      </div>
+
+      <!-- MEDIA PARTNERS -->
+      <div class="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
+        <div class="text-xs font-bold text-gray-500 uppercase tracking-wider px-4 py-3 border-b border-gray-50">Media Partners</div>
+        <div class="p-4 grid grid-cols-3 gap-2">
+          <div class="bg-gray-100 rounded text-center text-[10px] font-bold text-gray-600 py-2">Kantipur</div>
+          <div class="bg-gray-100 rounded text-center text-[10px] font-bold text-gray-600 py-2">Onlinekhabar</div>
+          <div class="bg-gray-100 rounded text-center text-[10px] font-bold text-gray-600 py-2">Ratopati</div>
+          <div class="bg-gray-100 rounded text-center text-[10px] font-bold text-gray-600 py-2">Setopati</div>
+          <div class="bg-gray-100 rounded text-center text-[10px] font-bold text-gray-600 py-2">Nepali Times</div>
+          <div class="bg-gray-100 rounded text-center text-[10px] font-bold text-gray-600 py-2">+ more</div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer class="bg-gray-900 text-gray-400 mt-16">
+  <div class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+    <div class="col-span-2 md:col-span-1">
+      <p class="text-xl font-extrabold text-white mb-1">PR <span class="text-blue-400">Nepal</span></p>
+      <p class="text-xs leading-relaxed text-gray-500">Nepal's largest press release distribution and corporate news platform. Powered by Sanjal Communications Pvt. Ltd.</p>
+    </div>
+    <div>
+      <p class="text-xs font-bold text-white uppercase tracking-wider mb-3">Platform</p>
+      <ul class="space-y-2 text-xs">
+        <li><a href="#" class="hover:text-white transition">Submit Press Release</a></li>
+        <li><a href="#" class="hover:text-white transition">Browse by Category</a></li>
+        <li><a href="#" class="hover:text-white transition">Company Profiles</a></li>
+        <li><a href="#" class="hover:text-white transition">Rankings</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-xs font-bold text-white uppercase tracking-wider mb-3">For Media</p>
+      <ul class="space-y-2 text-xs">
+        <li><a href="#" class="hover:text-white transition">Journalist Access</a></li>
+        <li><a href="#" class="hover:text-white transition">Media Kit</a></li>
+        <li><a href="#" class="hover:text-white transition">RSS Feed</a></li>
+        <li><a href="#" class="hover:text-white transition">API Access</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-xs font-bold text-white uppercase tracking-wider mb-3">Company</p>
+      <ul class="space-y-2 text-xs">
+        <li><a href="#" class="hover:text-white transition">About Us</a></li>
+        <li><a href="#" class="hover:text-white transition">Pricing</a></li>
+        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-gray-800 py-4">
+    <p class="text-xs text-gray-600 text-center">© 2026 Sanjal Communications Pvt. Ltd. All Rights Reserved. &nbsp;·&nbsp; PR Nepal is an independent press wire service.</p>
+  </div>
+</footer>
+
+<script>
+  function setTab(btn, tab) {
+    document.querySelectorAll('[data-tab]').forEach(b => {
+      b.classList.remove('tab-active');
+      b.classList.add('text-gray-500');
+    });
+    btn.classList.add('tab-active');
+    btn.classList.remove('text-gray-500');
+  }
+</script>
+
+</body>
+</html>
